@@ -60,7 +60,7 @@ def scan(folder):
 
 def copy(files, folder):
     if files.is_dir():
-        shutil.copytree(files, folder / files.name)
+        shutil.copytree(files, folder / files.name, dirs_exist_ok=True)
     else:
         shutil.copy(files, folder)
 
